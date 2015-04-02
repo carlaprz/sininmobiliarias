@@ -4,11 +4,13 @@ namespace Inmobiliaria\Bundle\ApiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="operation")
+ * @Entity
+ * @InheritanceType("JOINED")
+ * @DiscriminatorColumn(name="discr", type="integer")
+ * @DiscriminatorMap({1 = "House", 2 = "Apartment", 3 = "Ph", 4="StoreHouse", 5 = "Loft", 6 = "Commercial", 7 = "Allotment", 8 = "CountyHouse" })
  */
 
-class Operation {
+abstract class Operation {
    /**
      * @ORM\Column(type="integer")
      * @ORM\Id
@@ -43,7 +45,5 @@ class Operation {
       * @ORM\Column(type="datetime", name="updated_at") 
       */
     protected $updatedAt;
-    
-
     
 }

@@ -5,8 +5,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @Entity
- * @InheritanceType("JOINED")
- * @DiscriminatorColumn(name="discr", type="integer")
+ * @InheritanceType("SINGLE_TABLE")
+ * @DiscriminatorColumn(name="type", type="integer")
  * @DiscriminatorMap({1 = "House", 2 = "Apartment", 3 = "Ph", 4="StoreHouse", 5 = "Loft", 6 = "Commercial", 7 = "Allotment", 8 = "CountyHouse" })
  */
 abstract class Property {
@@ -69,32 +69,12 @@ abstract class Property {
      * @ORM\Column(type="integer")
      **/
     protected $age;
+    
+    /**
+     * @ORM\Column(type="integer")
+     **/
+    protected $rooms;
    
-    /**
-     * @ORM\Column(type="boolean")
-     **/
-    protected $wather;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     **/
-    protected $phone;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     **/
-    protected $internet;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     **/
-    protected $electricity;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     **/
-    protected $gas;
-    
     /**
      * @ORM\Column(type="decimal", scale=2)
      **/
@@ -110,10 +90,29 @@ abstract class Property {
      **/
     protected $totalArea;
     
+    /**
+     * @ORM\Column(type="boolean")
+     **/
+    protected $credit;
+    
+    /**
+     * @ORM\Column(type="boolean")
+     **/
+    protected $financing;
+    
+        
+    /**
+     * @ORM\Column(type="text", name="json_attributes", nullable=true)
+     **/
+    protected $jsonAttributes;
+    
+    
     public function __construct() 
     {
         $this->createdAt = new DateTime();
         $this->updatedAt = new DateTime();
     }
+    
+    
 
 }
