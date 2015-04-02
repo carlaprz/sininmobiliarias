@@ -6,45 +6,27 @@ trait HabitableTrait
 {
 
     private $terrace;
-    
     private $playground;
-    
     private $airconditioning;
-    
     private $laundry;
-    
     private $jacuzzi;
-    
     private $swimmingPool;
-    
     private $grill;
-    
     private $bathroom;
-    
     private $heating;
-    
     private $cableTv;
-    
     private $water;
-    
     private $internet;
-    
     private $electricity;
-    
     private $gas;
-    
     private $condition;
-    
     private $luminosity;
-    
     private $alarma;
-    
     private $amoblado;
-    
     private $vigilancia;
+    private $garages;
+    private $coveredGarages;
 
-
-    
     function serialise()
     {
         $array = [
@@ -65,7 +47,7 @@ trait HabitableTrait
             "terrace" => $this->terrace,
             "gas" => $this->gas
         ];
-        
+
         $this->jsonAtrributes = json_encode($array);
     }
 

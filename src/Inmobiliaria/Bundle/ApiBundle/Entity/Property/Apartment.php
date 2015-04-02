@@ -10,7 +10,7 @@ use Inmobiliaria\Bundle\ApiBundle\Traits\HabitableTrait;
  */
 class Apartment extends Property implements \JsonSerializable
 {
-    use HabitableTrait;
+    use HabitableTrait; 
     
     private  $solarium;
     
