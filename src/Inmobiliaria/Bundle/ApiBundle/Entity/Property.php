@@ -5,7 +5,7 @@ namespace Inmobiliaria\Bundle\ApiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @Entity
+ * @Entity(repositoryClass="Inmobiliaria\Bundle\ApiBundle\Repository\PropertyRepository")
  * @InheritanceType("SINGLE_TABLE")
  * @DiscriminatorColumn(name="type", type="integer")
  * @DiscriminatorMap({1 = "House", 2 = "Apartment", 3 = "Ph", 4="StoreHouse", 5 = "Loft", 6 = "Commercial", 7 = "Allotment", 8 = "CountyHouse" })

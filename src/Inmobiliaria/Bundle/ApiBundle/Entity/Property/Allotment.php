@@ -3,36 +3,15 @@ namespace Inmobiliaria\Bundle\ApiBundle\Entity\Property;
 
 use Doctrine\ORM\Mapping as ORM;
 use Inmobiliaria\Bundle\ApiBundle\Entity\Property;
+use Inmobiliaria\Bundle\ApiBundle\Traits\UninhabitableTrait;
 
 /**
  * @ORM\Entity
 */
 class Allotment extends Property implements \JsonSerializable
 {
-    private  $frente;
-    
-    private  $largo;
-    
-    function getFrente()
-    {
-        return $this->frente;
-    }
+    use UninhabitableTrait;
 
-    function getLargo()
-    {
-        return $this->largo;
-    }
-
-    function setFrente($frente)
-    {
-        $this->frente = $frente;
-    }
-
-    function setLargo($largo)
-    {
-        $this->largo = $largo;
-    }
-        
     public function jsonSerialize()
     {
         

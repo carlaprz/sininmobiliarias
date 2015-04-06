@@ -5,13 +5,14 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @Entity
- * @InheritanceType("JOINED")
- * @DiscriminatorColumn(name="discr", type="integer")
- * @DiscriminatorMap({1 = "House", 2 = "Apartment", 3 = "Ph", 4="StoreHouse", 5 = "Loft", 6 = "Commercial", 7 = "Allotment", 8 = "CountyHouse" })
+ * @InheritanceType("SINGLE_TABLE")
+ * @DiscriminatorColumn(name="operation_type", type="integer")
+ * @DiscriminatorMap({1 = "Sale", 2 = "Rental", 3 = "TemporaryRental" })
  */
 
 abstract class Operation {
-   /**
+    
+    /**
      * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
