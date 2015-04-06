@@ -2,7 +2,6 @@
 namespace Inmobiliaria\Bundle\ApiBundle\Traits;
 
 
-
 trait CommercialTrait 
 {
     private $frontSize;

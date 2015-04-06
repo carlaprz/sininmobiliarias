@@ -1,17 +1,19 @@
 <?php
+
 namespace Inmobiliaria\Bundle\ApiBundle\Entity\Property;
 
 use Doctrine\ORM\Mapping as ORM;
 use Inmobiliaria\Bundle\ApiBundle\Entity\Property;
-use Inmobiliaria\Bundle\ApiBundle\Traits\HabitableHouseTrait;
+use Inmobiliaria\Bundle\ApiBundle\Traits\CommercialTrait;
 
 /**
  * @ORM\Entity
-*/
-class CuntryHouse extends Property implements \JsonSerializable
+ */
+class Commercial extends Property implements \JsonSerializable
 {
-    use HabitableHouseTrait;
-    
+
+    use CommercialTrait;
+
     public function jsonSerialize()
     {
         

@@ -45,4 +45,116 @@ abstract class Image
         $this->main = false;
         $this->presentations = new ArrayCollection();
     }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return Image
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set main
+     *
+     * @param boolean $main
+     * @return Image
+     */
+    public function setMain($main)
+    {
+        $this->main = $main;
+
+        return $this;
+    }
+
+    /**
+     * Get main
+     *
+     * @return boolean 
+     */
+    public function getMain()
+    {
+        return $this->main;
+    }
+
+    /**
+     * Set temporalFileName
+     *
+     * @param string $temporalFileName
+     * @return Image
+     */
+    public function setTemporalFileName($temporalFileName)
+    {
+        $this->temporalFileName = $temporalFileName;
+
+        return $this;
+    }
+
+    /**
+     * Get temporalFileName
+     *
+     * @return string 
+     */
+    public function getTemporalFileName()
+    {
+        return $this->temporalFileName;
+    }
+
+    /**
+     * Add presentations
+     *
+     * @param \Inmobiliaria\Bundle\ApiBundle\Entity\ImagePresentation $presentations
+     * @return Image
+     */
+    public function addPresentation(\Inmobiliaria\Bundle\ApiBundle\Entity\ImagePresentation $presentations)
+    {
+        $this->presentations[] = $presentations;
+
+        return $this;
+    }
+
+    /**
+     * Remove presentations
+     *
+     * @param \Inmobiliaria\Bundle\ApiBundle\Entity\ImagePresentation $presentations
+     */
+    public function removePresentation(\Inmobiliaria\Bundle\ApiBundle\Entity\ImagePresentation $presentations)
+    {
+        $this->presentations->removeElement($presentations);
+    }
+
+    /**
+     * Get presentations
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPresentations()
+    {
+        return $this->presentations;
+    }
 }

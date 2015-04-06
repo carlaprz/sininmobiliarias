@@ -2,9 +2,7 @@
 
 namespace Inmobiliaria\Bundle\ApiBundle\Traits;
 
-
-
-trait HabitableHouseTrait 
+trait UninhabitableTrait 
 {
     private $frontSize;
     private $depthSize;

@@ -3,16 +3,15 @@ namespace Inmobiliaria\Bundle\ApiBundle\Entity\Property;
 
 use Doctrine\ORM\Mapping as ORM;
 use Inmobiliaria\Bundle\ApiBundle\Entity\Property;
-use Inmobiliaria\Bundle\ApiBundle\Traits\HabitableApartementTrait;
-
+use Inmobiliaria\Bundle\ApiBundle\Traits\HabitableHouseTrait;
 
 /**
  * @ORM\Entity
 */
-class Loft extends Property  implements \JsonSerializable
+class CountryHouse extends Property implements \JsonSerializable
 {
-    use HabitableApartementTrait;
-   
+    use HabitableHouseTrait;
+    
     public function jsonSerialize()
     {
         
@@ -126,7 +125,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set createdAt
      *
      * @param \DateTime $createdAt
-     * @return Loft
+     * @return CountryHouse
      */
     public function setCreatedAt($createdAt)
     {
@@ -149,7 +148,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     * @return Loft
+     * @return CountryHouse
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -172,7 +171,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set postcode
      *
      * @param string $postcode
-     * @return Loft
+     * @return CountryHouse
      */
     public function setPostcode($postcode)
     {
@@ -195,7 +194,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set address
      *
      * @param string $address
-     * @return Loft
+     * @return CountryHouse
      */
     public function setAddress($address)
     {
@@ -218,7 +217,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set description
      *
      * @param string $description
-     * @return Loft
+     * @return CountryHouse
      */
     public function setDescription($description)
     {
@@ -241,7 +240,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set age
      *
      * @param integer $age
-     * @return Loft
+     * @return CountryHouse
      */
     public function setAge($age)
     {
@@ -264,7 +263,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set rooms
      *
      * @param integer $rooms
-     * @return Loft
+     * @return CountryHouse
      */
     public function setRooms($rooms)
     {
@@ -287,7 +286,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set uncoveredArea
      *
      * @param string $uncoveredArea
-     * @return Loft
+     * @return CountryHouse
      */
     public function setUncoveredArea($uncoveredArea)
     {
@@ -310,7 +309,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set coveredArea
      *
      * @param string $coveredArea
-     * @return Loft
+     * @return CountryHouse
      */
     public function setCoveredArea($coveredArea)
     {
@@ -333,7 +332,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set totalArea
      *
      * @param string $totalArea
-     * @return Loft
+     * @return CountryHouse
      */
     public function setTotalArea($totalArea)
     {
@@ -356,7 +355,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set credit
      *
      * @param boolean $credit
-     * @return Loft
+     * @return CountryHouse
      */
     public function setCredit($credit)
     {
@@ -379,7 +378,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set financing
      *
      * @param boolean $financing
-     * @return Loft
+     * @return CountryHouse
      */
     public function setFinancing($financing)
     {
@@ -402,7 +401,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set jsonAttributes
      *
      * @param string $jsonAttributes
-     * @return Loft
+     * @return CountryHouse
      */
     public function setJsonAttributes($jsonAttributes)
     {
@@ -425,7 +424,7 @@ class Loft extends Property  implements \JsonSerializable
      * Set user
      *
      * @param \Inmobiliaria\Bundle\ApiBundle\Entity\Property\User $user
-     * @return Loft
+     * @return CountryHouse
      */
     public function setUser(\Inmobiliaria\Bundle\ApiBundle\Entity\Property\User $user = null)
     {
@@ -448,7 +447,7 @@ class Loft extends Property  implements \JsonSerializable
      * Add operations
      *
      * @param \Inmobiliaria\Bundle\ApiBundle\Entity\Property\Operation $operations
-     * @return Loft
+     * @return CountryHouse
      */
     public function addOperation(\Inmobiliaria\Bundle\ApiBundle\Entity\Property\Operation $operations)
     {
@@ -481,7 +480,7 @@ class Loft extends Property  implements \JsonSerializable
      * Add images
      *
      * @param \Inmobiliaria\Bundle\ApiBundle\Entity\Property\PropertyImage $images
-     * @return Loft
+     * @return CountryHouse
      */
     public function addImage(\Inmobiliaria\Bundle\ApiBundle\Entity\Property\PropertyImage $images)
     {
